@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrisisLens AI – Multimodal Crisis Analysis Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div>
+          <h1>CrisisLens AI</h1>
+          <p class="subtitle">Multimodal Crisis Analysis Assistant powered by Gemini 3.</p>
+          <p class="disclaimer">
+            Disclaimer: Results are AI-assisted and do not replace professional emergency judgment.
+          </p>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="panel">
+          <h2>Submit Incident Details</h2>
+          <form id="analyze-form">
+            <label class="field">
+              <span>Upload Crisis Image (JPEG/PNG)</span>
+              <input id="image-input" type="file" accept="image/png,image/jpeg" required />
+            </label>
+            <label class="field">
+              <span>Incident Description</span>
+              <textarea
+                id="text-input"
+                rows="6"
+                placeholder="Describe the situation, location, and known impacts."
+                required
+              ></textarea>
+            </label>
+            <button class="primary" type="submit">Analyze Crisis</button>
+          </form>
+        </section>
+
+        <section class="panel" id="result-panel">
+          <div class="panel-header">
+            <h2>AI Insights</h2>
+            <span id="status" class="status">Awaiting analysis</span>
+          </div>
+          <pre id="result-output" class="result">Submit an image and description to see results.</pre>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
